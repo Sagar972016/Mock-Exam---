@@ -1,0 +1,150 @@
+:root{
+	--primary-color:#e50914;
+	--dark-color:rgba(0, 0, 0, 0.8);
+	--white-color:#fff;
+}
+
+body{
+	position:relative;
+}
+
+body::after{
+	content:'';
+	min-height: 100vh;
+	background-image : url(../img/img.jpg);
+	background-color: rgba(0, 0, 0, 0.6);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	filter:blur(2px);
+}
+.logo{
+	height: 50px;
+    display: block;
+}
+.logo img{
+	display:inline-block;
+	width:100%;
+	object-fit: cover;
+}
+.btn.btn-primary.btn-large.nfx-btn{
+	background-color:var(--primary-color);
+}
+
+
+.btn.nfx-btn,
+.btn.nfx-btn:active,
+.btn.nfx-btn:focus,
+.btn.nfx-btn:hover{
+	background-color:var(--primary-color);
+	border-color:var(--primary-color);
+	box-shadow: none !important;
+	border:0;	
+}
+
+.btn.nfx-btn{
+	background-color:var(--primary-color);
+}
+
+.card.movieCard figure img{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+.card.movieCard{
+	border: 0px;
+	margin-bottom:20px;	
+}
+.card.movieCard figure{
+	height: 450px;
+	transition:all 0.4s ease-in-out;
+	position:relative;	
+}
+.card.movieCard figcaption{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color:#fff;
+	opacity:0;
+	transition:all .4s ease-in-out;
+}
+
+.card.movieCard:hover figure{
+	transform:scale(1.10);
+}
+.card.movieCard:hover figcaption{
+	opacity:1;
+}
+.backDrop{
+	position:fixed;							
+	height:100vh;
+	width:100%;
+	top:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;	
+}
+
+.movieModal{
+	position:fixed;
+	background-color: #fff;
+	height: 300px;				
+	width:60%;
+	top:3%;
+	left:20%;
+	display: none;
+
+}
+.backDrop.visible{
+	display: block;
+	transition: fadeIn .35s ease-in-out ;
+}
+.movieModal.visible{
+	display: block;
+	transition : slideDown .5s ease-in-out;
+}
+.movieModal .card-header .movieClose{
+	font-size: 24px;
+}
+.movieClose{
+	cursor:pointer;
+}
+
+figcaption{
+	height:100%;
+}
+
+.content{
+	text-overflow: ellipsis;
+	white-space: wrap;
+	overflow-y: scroll;
+	scrollbar-shadow-color: rgba(0, 0, 0, 0.8) ;
+	width: 100%;
+	height: 258px;
+}
+
+
+.h2{
+	height: 50px;
+	overflow-y:hidden;
+}
+.loader{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
